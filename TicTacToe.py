@@ -1,11 +1,20 @@
-#testing
+# tic tac toe game
+from tkinter import Button
 
 from future.moves import tkinter
 
-window = tkinter.Tk()
-# Code to add widgets will go here...
+# create window
 
-greeting = tkinter.Label(text="Hello, Tkinter")
-greeting.pack()
+window = tkinter.Tk()
+
+for i in range(3):
+    for j in range(3):
+        frame = tkinter.Frame(
+            master=window
+        )
+        frame.grid(row=i, column=j)
+        button = Button(text= "H", width=10, height=5)
+        button.grid(row=i, column=j)
 
 window.mainloop()
+
